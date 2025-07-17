@@ -1,0 +1,32 @@
+import os
+import logging
+
+# Import necessary modules from google-adk
+from google.genai import types
+from google.adk.runners import Runner
+from google.adk.agents import LlmAgent
+from google.adk.models.lite_llm import LiteLlm
+
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()
+
+# Configure logging (basic setup)
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# User Defined Imports 
+from root_agent.sub_agents.time_agent.agent import get_time_agent 
+from root_agent.prompt import ROOT_AGENT_PROMPT
+
+# Constants
+GPT_MODEL = os.getenv("GPT_MODEL", "openai/gpt-4o")
+
+root_agent = LlmAgent(
+    model=LiteLlm(model=GPT_MODEL), #Use gemini-2.0-flash, set up env
+    name="Root_Agent",
+    description="This is your orchestrator agent. It manages other agents and tools. Make sure to you write a good description for it.",
+    instruction=ROOT_AGENT_PROMPT,
+    sub_agents=[get_time_agent],
+)
+

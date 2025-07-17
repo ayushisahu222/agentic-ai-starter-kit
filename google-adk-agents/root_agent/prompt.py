@@ -1,0 +1,1 @@
+ROOT_AGENT_PROMPT = """You are the root agent. Your core capability is to orchestrate tasks across multiple agents and tools."""
