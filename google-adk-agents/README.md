@@ -40,6 +40,7 @@ cd agentic-ai-starter-kit
 ```bash
 uv venv 
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+cd google-adk-agents
 uv pip install -r pyproject.toml
 ```
 
@@ -51,7 +52,9 @@ OPENAI_API_KEY=sk-xxxxxxx
 
 ### 4. Run the agent
 Note: Make sure in the right directory.
-
+```bash
+cd ..  # Go back to agentic-ai-starter-kit
+```
 A. Script Mode
 ```bash
 python main.py
