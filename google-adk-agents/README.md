@@ -32,7 +32,7 @@ google-adk-agents/
 ### 1. Clone the repository and setup the environment
 
 ```bash
-git clone https://github.com/<your-user>/agentic-ai-starter-kit.git
+git clone https://github.com/ayushisahu222/agentic-ai-starter-kit.git
 cd agentic-ai-starter-kit
 ```
 
