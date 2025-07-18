@@ -51,10 +51,6 @@ OPENAI_API_KEY=sk-xxxxxxx
 ```
 
 ### 4. Run the agent
-Note: Make sure in the right directory.
-```bash
-cd ..  # Go back to agentic-ai-starter-kit
-```
 A. Script Mode
 ```bash
 python main.py
