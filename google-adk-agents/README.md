@@ -46,7 +46,7 @@ uv pip install -r pyproject.toml
 
 ### 3. Change the name of the file dotenv.exmaple -> .env
 ```bash
-GPT_MODEL=LiteLlm(model="openai/gpt-4o")
+GPT_MODEL=openai/gpt-4o
 OPENAI_API_KEY=sk-xxxxxxx
 ```
 
