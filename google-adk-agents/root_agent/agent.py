@@ -20,11 +20,11 @@ from root_agent.sub_agents.time_agent.agent import get_time_agent
 from root_agent.prompt import ROOT_AGENT_PROMPT
 
 # Constants
-GPT_MODEL = os.getenv("GPT_MODEL", LiteLlm(model="openai/gpt-4o"))
+GPT_MODEL = os.getenv("GPT_MODEL")
 # GEMINI_MODEL = os.getenv("GEMINI_MODEL","gemini-2.0-flash-001")
 
 root_agent = LlmAgent(
-    model=GPT_MODEL, #Use gemini-2.0-flash, set up env
+    model=LiteLlm(model=GPT_MODEL), #Replace LiteLlm(model=GPT_MODEL) with GEMINI_MODEL if using Gemini
     name="Root_Agent",
     description="This is your orchestrator agent. It manages other agents and tools. Make sure to you write a good description for it.",
     instruction=ROOT_AGENT_PROMPT,
