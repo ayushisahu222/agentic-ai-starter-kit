@@ -1,4 +1,4 @@
-# Google ADK Starter Kit
+# OpenAI Agent SDK Starter Kit
 
 A clean, modular starter kit for building AI agents using **OpenAI Agent SDK**
 
