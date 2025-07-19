@@ -52,4 +52,4 @@ export OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 python main.py
 ```
 
-To read more about OpenAI Agent SDK, visit [https://google.github.io/adk-docs/](https://openai.github.io/openai-agents-python/)
+To read more about OpenAI Agent SDK, visit https://openai.github.io/openai-agents-python/
