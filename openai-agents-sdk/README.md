@@ -6,20 +6,22 @@ A clean, modular starter kit for building AI agents using **OpenAI Agent SDK**
 
 ## 📁 Project Layout
 ```bash
-google-adk-agents/
-├── .env # Environment config (.env)
-├── main.py # Script entrypoint
-├── pyproject.toml # Dependency declarations
-├── uv.lock # Locked dependency versions
+openai-agents-sdk/
+├── main.py                  # Entry point to run the root agent
+├── pyproject.toml           # Project dependencies and configuration
+├── uv.lock                  # Locked dependencies (used with uv or pip)
 ├── root_agent/
-│ ├── agent.py # Root LlmAgent orchestrator
-│ ├── prompt.py # Root agent prompt messages
-│ └── sub_agents/
-│ └── time_agent/
-    │ ├── agent.py # Sub-agent to return current time
-    │ ├── prompt.py # Sub-agent prompt
-    │ └── tools.py # Sub-agent tools (if any)
-└── README.md # This file
+│   ├── __init__.py          # Module init
+│   ├── agent.py             # Root agent logic
+│   ├── prompt.py            # Prompt template for the root agent
+│   └── tools.py             # Tools used by the root agent
+├── handoffs/
+│   └── time_agent/
+│       ├── __init__.py      # Module init
+│       ├── agent.py         # Sub-agent to handle time-related tasks
+│       ├── prompt.py        # Prompt template for the time agent
+│       └── tools.py         # Tools (e.g., get_current_time) used by time agent
+└── README.md                # Project documentation
 ```
 
 ---
@@ -36,25 +38,18 @@ cd agentic-ai-starter-kit
 ```bash
 uv venv 
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
-cd google-adk-agents
+cd openai-agents-sdk
 uv pip install -r pyproject.toml
 ```
 
-### 3. Change the name of the file dotenv.exmaple -> .env
+### 3. Setup the OpenAI API Key
 ```bash
-GPT_MODEL=openai/gpt-4o
-OPENAI_API_KEY=sk-xxxxxxx
+export OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
 ### 4. Run the agent
-A. Script Mode
 ```bash
 python main.py
 ```
-B. GUI Mode with ADK
-```bash
-adk web
-```
-Visit http://localhost:8080 to interact.
 
-To read more about Google ADK, visit https://google.github.io/adk-docs/
+To read more about OpenAI Agent SDK, visit [https://google.github.io/adk-docs/](https://openai.github.io/openai-agents-python/)
