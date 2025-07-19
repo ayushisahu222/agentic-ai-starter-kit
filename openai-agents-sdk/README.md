@@ -46,6 +46,7 @@ uv pip install -r pyproject.toml
 ```bash
 export OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
+Go to https://platform.openai.com/docs/overview to get the OpenAI API key.
 
 ### 4. Run the agent
 ```bash
