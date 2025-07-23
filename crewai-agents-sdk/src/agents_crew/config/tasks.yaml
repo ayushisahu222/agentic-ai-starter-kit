@@ -1,0 +1,10 @@
+# src/research_crew/config/tasks.yaml
+time_task:
+  description: >
+    Provide the current date and time in a specified format.
+    This task is essential for ensuring that all agents have access to accurate time information
+    for scheduling and logging purposes.
+  expected_output: >
+    The current date and time formatted as YYYY-MM-DD HH:MM:SS.
+  agent: time_agent
+
