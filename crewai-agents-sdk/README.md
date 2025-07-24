@@ -1,4 +1,4 @@
-# OpenAI Agent SDK Starter Kit
+# CrewAI Agent SDK Starter Kit
 
 A clean, modular starter kit for building AI agents using **CrewAI Agent SDK**
 
